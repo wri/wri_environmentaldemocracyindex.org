@@ -1,0 +1,42 @@
+<div class="indicators">
+  {{#if indicatorsLaw}}
+    <div class="indicator-title">
+      <span>LAW</span>
+      <button data-type="Law" class="more-info-type-indicator notranslate">?</button>
+    </div>
+    <ul class="indicators-index">
+      {{#each indicatorsLaw}}
+        <li class="indicator" data-number="{{indicatorNumber}}" data-type="{{type}}">
+          <p><span>Indicator {{this.indicatorNumber}}:</span>
+          {{this.indicatorText}}
+          </p>
+          <div class="more-info-and-rrss">
+            <button class="more-info more-info-indicator">?</button>
+            <button class="more-info more-info-btn notranslate" data="{{this.indicatorNumber}}" data-type="{{type}}">i</button>
+          </div>
+          <span class="score score-{{this.score}}">{{this.score}}</span>
+        </li>
+      {{/each}}
+    </ul>
+  {{/if}}
+  {{#if indicatorsPractice}}
+    <div class="indicator-title">
+      <span>PRACTICE</span>
+      <button data-type="Practice" class="more-info-type-indicator notranslate">?</button>
+    </div>
+    <ul class="indicators-index">
+      {{#each indicatorsPractice}}
+        <li class="indicator" data-number="{{indicatorNumber}}" data-type="{{type}}">
+          <p><span>Indicator {{this.indicatorNumber}}:</span>
+          {{this.indicatorText}}
+          </p>
+          <div class="more-info-and-rrss">
+            <button class="more-info more-info-indicator">?</button>
+            <button class="more-info more-info-btn notranslate" data="{{this.indicatorNumber}}" data-type="{{type}}">i</button>
+          </div>
+          <span class="score in-practice score-{{this.score}}">{{this.score}}</span>
+        </li>
+      {{/each}}
+    </ul>
+  {{/if}}
+</div>
